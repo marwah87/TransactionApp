@@ -20,7 +20,7 @@ import java.util.stream.Collectors;
 
 @Controller
 public class TransactionController {
-    @Value("${spring.application.name")
+    @Value("${spring.application.name}")
     private String appName;
     @Autowired
     TransactionServiceImpl transactionService;

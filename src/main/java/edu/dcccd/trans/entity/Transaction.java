@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.awt.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -30,6 +29,7 @@ public class Transaction {
     public Transaction(Long id, String type, String day, BigDecimal amount, String description){
         this.time = currentTime();
         this.id = id;
+        this.day = day;
         this.description = description;
         this.amount = amount;
         this.type = type;
