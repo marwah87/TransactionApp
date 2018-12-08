@@ -1,7 +1,7 @@
 package edu.dcccd.trans.controller;
 
 import edu.dcccd.trans.entity.Transaction;
-import edu.dcccd.trans.servicce.TransactionServiceImpl;
+import edu.dcccd.trans.service.TransactionServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
-import javax.persistence.*;
 
 import javax.validation.Valid;
 import java.time.DayOfWeek;
@@ -28,7 +27,7 @@ public class TransactionController {
     private String appName;
     @Autowired
     TransactionServiceImpl transactionService;
-    @GetMapping("/")
+    @GetMapping(value = {"/", "/home"})
     public String homePage (Model model){
         model.addAttribute("appName", appName);
         return "home";

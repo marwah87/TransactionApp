@@ -1,4 +1,4 @@
-package edu.dcccd.trans.servicce;
+package edu.dcccd.trans.service;
 
 import edu.dcccd.trans.entity.Transaction;
 import edu.dcccd.trans.repository.TransactionRepository;
